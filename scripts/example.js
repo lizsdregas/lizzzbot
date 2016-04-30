@@ -3,14 +3,14 @@
 module.exports = function(robot) {
 
 	// simple "hello" response
-	robot.hear(/hello\?/i, function(response) {
+	robot.hear(/hello/i, function(response) {
 		response.send('HEY THERE');
-	})
+	}) 
 
   // simple "hello" response
-	robot.hear(/users\?/i, function(response) {
-    var users = users.list();
-		response.send(users); 
+	robot.hear(/users/i, function(response) {
+    var users = 'https://slack.com/api/users.list?token=xoxp-38185445795-38219843827-39192086817-3c4f792623';
+		response.send(users);
 	})
 
   // if the bot hears "cat" it will reply with a random, cute cat picture
