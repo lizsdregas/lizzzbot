@@ -1,8 +1,8 @@
 module.exports = function(robot) {
 
-	// simple "hello" response
-	robot.hear(/hello/i, function(response) {
-		response.send('HEY THERE');
+	// simple response     
+	robot.hear(/beyonce/i, function(response) {
+		response.send('http://www.simplyrecipes.com/wp-content/uploads/2006/06/lemonade-640-dm.jpg');
 	});
 
   // if the bot hears "cat" it will reply with a random, cute cat picture
@@ -35,7 +35,7 @@ module.exports = function(robot) {
   //bot will answer when asked who built it
 	robot.respond(/who programmed you\?/i, function(response) {
 		var user = robot.brain.userForName('lizsdregas')
-		response.reply(user.real_name + 'did!'); 
+		response.reply(user.real_name + ' did!');
 	});
 
 }
