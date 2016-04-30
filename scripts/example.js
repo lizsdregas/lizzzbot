@@ -1,14 +1,12 @@
 module.exports = function(robot) {
 
-	// robot.hear() will have the robot listen in on any channel it's in
-	robot.hear(/hello/i, function(response) {
-		response.send("HELLO LIZ")
+	// ask the bot if we have class today
+	robot.hear(/hello\?/i, function(response) {
+		response.send('HELLO LIZ');
 	})
 
-	robot.hear(/i like (.+)/i, function(response) {
-		var like = response.match[1]
-		// response.reply() will have the robot at-mention you when it responds
-		response.reply('I actually hate ' + like)
+	robot.hear(/i like gifs/i, function(response) { 
+		response.reply('/giphy')
 	})
 
 	// robot.respond() means the robot will only reply when at-mentioned or DMed
