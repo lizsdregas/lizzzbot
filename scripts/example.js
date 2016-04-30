@@ -14,9 +14,9 @@ module.exports = function(robot) {
       'http://www.recipe.com/images/stevia-in-the-rawreg-lemonade-24600004rca-ss.jpg'
     ]
 
-    var randomImage = images[Math.floor(Math.random() * (imageArray.length))];
-
-		response.send('test');
+    //var randomImage = images[Math.floor(Math.random() * (imageArray.length))];
+  
+		response.send(imageArray[5]);
 	});
 
   // if the bot hears "cat" it will reply with a random, cute cat picture from placekitten
