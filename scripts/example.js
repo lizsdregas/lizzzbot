@@ -1,6 +1,6 @@
 module.exports = function(robot) {
 
-	// simple response     
+	// simple response
 	robot.hear(/beyonce/i, function(response) {
 		response.send('http://www.simplyrecipes.com/wp-content/uploads/2006/06/lemonade-640-dm.jpg');
 	});
@@ -16,6 +16,7 @@ module.exports = function(robot) {
 		response.reply(imageUrl);
 	});
 
+  // if you ask the bot "is it friday yet?" it will respond based on the day of the week
 	robot.hear(/is it friday yet\?/i, function(response) {
     var date = new Date(); //get today's date
     var daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -35,7 +36,7 @@ module.exports = function(robot) {
   //bot will answer when asked who built it
 	robot.respond(/who programmed you\?/i, function(response) {
 		var user = robot.brain.userForName('lizsdregas')
-		response.reply(user.real_name + ' did!');
-	});
+		response.reply(user.real_name + ' did! email her at ' + user.email + 'and maybe she will create one for you!');
+	});  
 
 }
