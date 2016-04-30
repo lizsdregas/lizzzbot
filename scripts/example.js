@@ -36,7 +36,7 @@ module.exports = function(robot) {
   //bot will answer when asked who built it
 	robot.respond(/who programmed you\?/i, function(response) {
 		var user = robot.brain.userForName('lizsdregas')
-		response.reply(user.real_name + ' did! email her at ' + user.email + 'and maybe she will create one for you!');
-	});  
+		response.reply(user.real_name + ' did!');  
+	});
 
 }
