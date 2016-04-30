@@ -1,3 +1,5 @@
+
+
 module.exports = function(robot) {
 
 	// ask the bot if we have class today
@@ -5,8 +7,10 @@ module.exports = function(robot) {
 		response.send('HELLO LIZ');
 	})
 
-	robot.hear(/i like gifs/i, function(response) {
-		response.send('/giphy party')
+	robot.hear(/cats/i, function(response) {
+    var imageUrl = 'http://placekitten.com/200/300';
+
+		response.reply(imageUrl); 
 	})
 
 	// robot.respond() means the robot will only reply when at-mentioned or DMed
