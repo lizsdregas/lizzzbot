@@ -3,7 +3,7 @@ module.exports = function(robot) {
 	// simple response
 	robot.hear(/beyonce/i, function(response) {
 
-    var imageArray = [ 
+    var imageArray = [
       'http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2010/4/26/0/FNM_060110-Centerfold-028_s4x3.jpg.rend.sniipadlarge.jpeg',
       'http://www.simplyrecipes.com/wp-content/uploads/2006/06/lemonade-640-dm.jpg',
       'http://cdn-image.realsimple.com/sites/default/files/styles/rs_main_image/public/image/images/1107/lemonade_300.jpg?itok=EW483h6w',
@@ -16,7 +16,7 @@ module.exports = function(robot) {
 
     var randomImage = images[Math.floor(Math.random() * (imageArray.length))];
 
-		response.send(randomImage);
+		response.send('test');
 	});
 
   // if the bot hears "cat" it will reply with a random, cute cat picture from placekitten
