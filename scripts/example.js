@@ -8,7 +8,7 @@ module.exports = function(robot) {
 	robot.hear(/i like (.+)/i, function(response) {
 		var like = response.match[1]
 		// response.reply() will have the robot at-mention you when it responds
-		response.reply('I also like ' + like)
+		response.reply('I actually hate ' + like)
 	})
 
 	// robot.respond() means the robot will only reply when at-mentioned or DMed
