@@ -1,6 +1,6 @@
 module.exports = function(robot) {
 
-	// simple response
+	// simple response with image from array 
 	robot.hear(/beyonce/i, function(response) {
 
     var imageArray = [
@@ -14,9 +14,8 @@ module.exports = function(robot) {
       'http://www.recipe.com/images/stevia-in-the-rawreg-lemonade-24600004rca-ss.jpg'
     ]
 
-    //var randomImage = images[Math.floor(Math.random() * (imageArray.length))];
-  
-		response.send(imageArray[5]);
+    var randomImage = imageArray[Math.floor(Math.random() * (imageArray.length))];
+		response.send(randomImage);
 	});
 
   // if the bot hears "cat" it will reply with a random, cute cat picture from placekitten
