@@ -5,8 +5,8 @@ module.exports = function(robot) {
 		response.send('HELLO LIZ');
 	})
 
-	robot.hear(/i like gifs/i, function(response) { 
-		response.reply('/giphy')
+	robot.hear(/i like gifs/i, function(response) {
+		response.send('/giphy party')
 	})
 
 	// robot.respond() means the robot will only reply when at-mentioned or DMed
