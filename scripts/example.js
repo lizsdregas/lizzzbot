@@ -32,10 +32,10 @@ module.exports = function(robot) {
     }
 	});
 
-  //
-	robot.respond(/what\?/i, function(response) {
+  //bot will answer when asked who built it
+	robot.respond(/who programmed you\?/i, function(response) {
 		var user = robot.brain.userForName('lizsdregas')
-		response.reply(user.real_name) 
-	})
+		response.reply(user.real_name + 'did!'); 
+	});
 
 }
