@@ -24,8 +24,8 @@ module.exports = function(robot) {
 		response.reply(imageUrl);
 	});
 
-
-	robot.respond(/is it friday yet\?/i, function(response) {
+ 
+	robot.hear(/is it friday yet\?/i, function(response) {
     var date = new Date(); //get today's date
     var daysOfTheWeek = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
     var today = daysOfTheWeek[date.getDay()]; //get the day of the week
@@ -39,6 +39,6 @@ module.exports = function(robot) {
     } else {
         response.send("It's not Friday yet, keep working!")
     }
-	}); 
+	});
 
 }
