@@ -8,9 +8,10 @@ module.exports = function(robot) {
 	})
 
 	robot.hear(/cats/i, function(response) {
-    var imageUrl = 'http://placekitten.com/200/300';
-
-		response.reply(imageUrl); 
+    var randomWidth = Math.random() * 200;
+    var randomHeight - Math.random() * 300;
+    var imageUrl = 'http://placekitten.com/' + randomWidth + '/' + randomHeight;    
+		response.reply(imageUrl);
 	})
 
 	// robot.respond() means the robot will only reply when at-mentioned or DMed
